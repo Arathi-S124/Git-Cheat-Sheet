@@ -1,5 +1,5 @@
 # Git-Cheat-Sheet
-Some commands that have helped me through understanding this platform.
+**Some commands that have helped me through understanding this platform.**
 
 Refrences :-
 
