@@ -11,4 +11,4 @@ Practice at :-
 
 https://www.katacoda.com/courses/git
 
-https://www.katacoda.com/courses/git
+https://www.qwiklabs.com/focuses/850?parent=catalog
