@@ -1,0 +1,160 @@
+**Set username and user email for all repositories**
+git config --global user.name "name"
+git config --global user.email "mail"
+
+Initialize empty git repository in current directory
+git init [Do this command in the directory of choice]
+
+Add file to staging area
+git add filename
+
+Information about current working tree and pending changes
+git status
+
+Commit from staging area to directory
+git commit
+or
+git commit -m "Add commit message"
+
+To check current configuration
+git config -l
+
+Check history of commits
+git log
+
+A shortcut to stage any changes + commit
+git commit -a
+
+To give patches that was created
+git log -p
+
+To see a specific patch
+git show <commit hash>
+
+To view changes in commiy
+git log --stat
+
+Changes made in file to be shown
+git diff
+
+Before staging confirmation is aksed
+git add -p
+
+Changes that are staged and not commited yet
+git diff --staged
+
+File removal from directory
+git rm [Note - A commit message with reason of removing the file is important to keep track]
+
+Renaming file
+git mv <oldname> <newname> [Make sure to commit]
+
+For any file that you want to be ignored from current repository
+echo filename > .gitignore
+git add .gitignore
+git commit -m "Message"
+
+change file back to earlier commited state 
+git checkout filename [Before getting staged]
+
+Unstage the changes [Removing files from staging area]
+git reset HEAD <filename>
+
+-->Amending Commits
+Update commit to include any change 
+git add <missing file>
+git commit --amend  [ Same batch of change will now have the file we forgot to add]
+
+
+-->Rollback Commits
+Creates commit that contains inverse of all the changes made in a bad commit
+git reverT HEAD
+git revert <commit hash>
+
+Git branch listing
+git branch
+
+Create branch 
+git branch <name>
+
+Change to the branch we want
+git checkout <name>
+
+The above 2 steps can be done 1 go
+git checkout -b <name>
+
+Get rid of branch
+git branch -d <name>
+
+Merging a branch into master
+git merge <branch name>
+
+Fix conflict
+1. First do = git merge <branch name>
+2. Conflict error pops up
+3. Do = git status
+4. We are in master so we'll make changes we want = git add <file>
+5. Remove headers
+6. Then = git commit
+
+Commits a graph and seeing one line/commit
+git log --graph --online
+
+Stop the merge and reset files in working tree back to previous commit before the merge ever happened
+git merge --abort 
+
+Configuration for the remote
+git remote -v
+
+Changes to remote branch
+1. Pull remote branch
+2. Merge it with local branch
+3. Push it back to ir origin.
+
+Copies to commits done in remote rep to the remote branches
+git fetch
+
+Merge hanges to the master branch of remote rep into our local branch
+git merge origin/master
+
+To fethc+merge (Into local master branch)
+git pull
+
+Remove remote branch
+git push --delete <name>
+
+To remove local branch
+git branch -d <name>
+
+When merging is denied while push and we have force git to push current snapshot
+git push -f
+
+CHERRY PICKING
+To merge individual commits
+git cherry-pick <hash-id|ref>
+
+To stop and revert the pick using
+git cherry-pick --abort
+
+Resolving Cherry Picking Conflict
+git cherry-pick <FETCH-HEAD>
+git status
+git diff
+git checkout --theirs <file>
+
+Once the conflicts have been resolved you can continue with the cherry pick using the command
+1. Complete the cherry pick by first adding the previously conflicted item = git add <file>
+2. Then = git cherry-pick --continue
+
+
+
+
+
+
+
+
+
+
+
+
+
