@@ -145,16 +145,3 @@ git checkout --theirs <file>
 -> Once the conflicts have been resolved you can continue with the cherry pick using the command
 1. Complete the cherry pick by first adding the previously conflicted item = git add <file>
 2. Then = git cherry-pick --continue
-
-
-
-
-
-
-
-
-
-
-
-
-
